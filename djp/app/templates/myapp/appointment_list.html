@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title >Doctor List</title>
+    <style>
+        table {
+            width: 90%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            margin-left : 30px;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h2>Appointment List</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Patient Name</th>
+                <th>Gender</th>
+                <th>Address</th>
+                <th>Email</th>
+                <th>Disease</th>
+                <th>Mobile</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            {% for a in appointments %}
+                <tr>
+                    <td>{{ a.patient_name }}</td>
+                    <td>{{ a.patient_gender }}</td>
+                    <td>{{ a.patient_address }}</td>
+                    <td>{{ a.patient_email }}</td>
+                    <td>{{ a.patient_disease }}</td>
+                    <td>{{ a.patient_mobile }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
+
+
